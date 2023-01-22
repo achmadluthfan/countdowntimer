@@ -1,5 +1,4 @@
-import { createElement } from "../old/function.js";
-import { getData, convertDate, countDown } from "./function.js";
+import { getData, convertDate, countDown, createElement } from "./function.js";
 
 // Format & Zone event listener
 
