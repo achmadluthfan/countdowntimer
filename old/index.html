@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container relative">
+      <div class="choice absolute border-2 w-[100vw] h-[0vh]">
+        <div class="relative mx-auto">
+          <div class="title">
+            <h1>Choice your day!</h1>
+          </div>
+          <div class="days">
+            <div
+              class="day new-year relative h-32 flex items-center justify-center"
+            >
+              <p class="relative z-10 text-white">New Year</p>
+              <img
+                class="h-[100%] w-[100%] object-cover absolute z-0 hidden"
+                src="../image/image/new-year.jpg"
+                alt=""
+              />
+            </div>
+            <div class="day eid">
+              <p>Eid Mubarak</p>
+              <img src="../image/image/eid-mubarak-1.jpg" alt="" />
+            </div>
+            <div class="day christmas">
+              <p>Christmas</p>
+              <img src="../image/image/chrismas.jpg" alt="" />
+            </div>
+            <div class="day seclusion">
+              <p>Seclusion</p>
+              <img src="../image/image/prambanan.jpg" alt="" />
+            </div>
+            <div class="day vesak">
+              <p>Vesak</p>
+              <img src="../image/image/borobudur.jpg" alt="" />
+            </div>
+            <div class="day chinese">
+              <p>Chinese New Year</p>
+              <img src="../image/image/chinese.jpg" alt="" />
+            </div>
+          </div>
+          <div class="close">
+            <div>X</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-parent">
+        <div class="main">
+          <h1></h1>
+          <button class="choose-day">Select day</button>
+          <div class="time">
+            <div class="clock">
+              <p class="twelve-hour">AM</p>
+              <div class="three-dot">
+                <div></div>
+              </div>
+            </div>
+            <div class="date"></div>
+
+            <div class="countdown-parent">
+              <p class="remaining-time"></p>
+              <p class="remaining-time"></p>
+              <p class="remaining-time"></p>
+              <p class="remaining-time"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="back">🔙</button>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

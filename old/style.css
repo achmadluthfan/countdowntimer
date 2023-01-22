@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../image/image/indonesia.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  transition: 0.3s ease;
+}
+
+/* .glass {
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    position: absolute;
+} */
+
+/* Container Section */
+.container {
+  width: 100vw;
+  height: 100vh;
+  transition: 0.3s ease;
+}
+
+/* End of Container */
+
+.pop-up-effect-body {
+  backdrop-filter: blur(3px);
+}
+.pop-up-effect-container {
+  filter: blur(3px);
+}
+
+/* Choice Section */
+
+.choice {
+  width: 30%;
+  height: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+.choice .title {
+  flex-basis: 20%;
+}
+
+.choice .title h1 {
+  padding-top: 40px;
+}
+
+.choice .days {
+  flex-basis: 100%;
+  display: grid;
+}
+
+.days .day {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.3s;
+  transition: 0.5s;
+  position: relative;
+}
+
+.day p {
+  transition: 0.4s;
+  position: relative;
+}
+
+.day p::before {
+  content: "";
+  height: 2px;
+  background-color: rgb(227, 227, 227);
+  transform-origin: left center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+  width: 0;
+}
+
+.day:hover p:before {
+  width: 100%;
+}
+
+.days .day img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.day:hover img {
+  opacity: 1;
+  width: 100%;
+}
+
+.day:nth-child(6) img {
+  border-radius: 0 0 10px 10px;
+}
+
+.days .day:hover p {
+  color: rgb(227, 227, 227);
+}
+
+.choice .close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-color: salmon;
+  border-radius: 7px;
+  right: 0;
+  margin: 15px 20px 0 0;
+  cursor: pointer;
+}
+
+/* .close div:nth-child(1) {
+    transform: rotate(90deg);
+} */
+
+/* End of Choice */
+
+/* Main section */
+.container .main {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: fit-content;
+  padding: 2em 3em;
+}
+
+.main .choose-day {
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  width: fit-content;
+  margin: 10px auto 0 auto;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+}
+.choose-day:hover {
+  background-color: blueviolet;
+}
+
+.time {
+  width: fit-content;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 6rem;
+}
+
+.time .second,
+.twelve-hour {
+  position: absolute;
+  font-size: 1rem;
+  right: -45px;
+}
+
+.time .second {
+  bottom: 10px;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 0 40px;
+  width: 70%;
+}
+
+.time .date {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 1rem;
+}
+
+.time .countdown-parent {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 12px;
+  display: none;
+}
+
+.countdown-parent .remaining-time {
+  border-radius: 8px;
+  width: auto;
+  text-align: center;
+  position: relative;
+  border: none;
+  padding: 10px;
+}
+
+.remaining-time:nth-child(1):after {
+  content: "day";
+  position: absolute;
+  bottom: -24px;
+  font-size: 1rem;
+  font-weight: 800;
+  right: 50%;
+  transform: translateX(50%);
+}
+.remaining-time:nth-child(2):after {
+  content: "hour";
+  position: absolute;
+  bottom: -24px;
+  font-size: 1rem;
+  font-weight: 800;
+  right: 50%;
+  transform: translateX(50%);
+}
+.remaining-time:nth-child(3):after {
+  content: "minute";
+  position: absolute;
+  bottom: -24px;
+  font-size: 1rem;
+  font-weight: 800;
+  right: 50%;
+  transform: translateX(50%);
+}
+.remaining-time:nth-child(4):after {
+  content: "second";
+  position: absolute;
+  bottom: -24px;
+  font-size: 1rem;
+  font-weight: 800;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* .remaining-time:nth-child(1)::before, .remaining-time:nth-child(2)::before, .remaining-time:nth-child(3)::before {
+    content: ":";
+    position: absolute;
+    right: -23px;
+    bottom: 13%;
+    display: none;
+} */
+
+.new-year-style {
+  background-color: rgba(21, 31, 41, 0.8);
+  color: rgb(235, 235, 235);
+  background-color: rgba(21, 31, 41, 0.8);
+}
+
+.eid-style {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.chrismas-style {
+  background-color: rgba(128, 107, 44, 0.7);
+  color: rgb(235, 235, 235);
+}
+
+.seclusion-style {
+  background-color: rgba(27, 31, 30, 0.6);
+  color: rgb(235, 235, 235);
+}
+
+.vesak-style {
+  background-color: rgba(196, 157, 85, 0.7);
+  color: rgb(235, 235, 235);
+}
+
+.chinese-style {
+  background-color: rgba(74, 95, 70, 0.6);
+  color: rgb(235, 235, 235);
+}
+
+/* End of Main */
+
+/* back button */
+.back {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  box-shadow: 22px 25px 13px 0px rgba(0, 0, 0, 0.1);
+}
+
+.back:hover {
+  transform: scale(1.2);
+}
+/* end of back button */
+
+/* three dot section */
+.three-dot {
+  position: absolute;
+  right: -70px;
+  top: -15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 35px;
+  width: 20px;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.three-dot:active {
+  border: 1px solid rgb(172, 159, 157);
+}
+
+.three-dot div {
+  height: 4px;
+  width: 4px;
+  background-color: rgb(61, 61, 61);
+  position: relative;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.three-dot div::after {
+  content: "";
+  height: 4px;
+  width: 4px;
+  background-color: rgb(61, 61, 61);
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.three-dot div::before {
+  content: "";
+  height: 4px;
+  width: 4px;
+  background-color: rgb(61, 61, 61);
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+/* end of three dot */
+
+/* element if three dot was clicked */
+.format {
+  width: 250px;
+  height: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(47, 45, 45, 0.6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  color: rgb(40, 38, 38);
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.location-time,
+.format-clock {
+  text-align: center;
+  cursor: pointer;
+}
+
+.location-time > div,
+.format-clock > div {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+div.clicked-effect {
+  background-color: salmon;
+}
+
+.format .apply-setting {
+  background-color: rgb(222, 38, 38);
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: rgb(222, 222, 222);
+  transition: all 0.3s;
+}
+
+.format .apply-setting:hover {
+  background-color: rgb(230, 63, 63);
+}
+
+/* END element if three dot was clicked */
+
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 500px) {
+  .container .main {
+    transform: translate(-65%, -50%);
+  }
+}

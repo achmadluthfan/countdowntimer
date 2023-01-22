@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.format-show-style {
+  @apply opacity-100 top-[45%] z-20;
+}
+
+.chosen {
+  @apply translate-y-0 bg-[#e46354];
+}
+
+.pseudo-newyer {
+  @apply after:absolute after:bottom-0 after:left-1 tracking-tight;
+}
+
+.pseudo-chrismas {
+  @apply after:absolute after:bottom-0 after:left-[50%] after:-translate-x-[50%] tracking-tight;
+}
+
+.pseudo-seclusion {
+  @apply after:absolute after:bottom-0 after:left-[50%] after:-translate-x-[50%] after:text-slate-800 before:content-['/'] before:absolute before:-right-3 xl:before:-right-5 2xl:before:hidden;
+}
+
+.pseudo-vesak {
+  @apply after:absolute after:top-[50%] after:-right-12 after:font-medium after:text-slate-300 md:after:-right-24;
+}
+
+.pseudo-chinese {
+  @apply after:absolute after:bottom-0 after:left-2 after:font-medium after:text-yellow-500;
+}
+
+.eid-parent-span-style {
+  @apply relative bg-slate-100 bg-opacity-80 rounded-lg flex justify-center items-center after:absolute after:bottom-1 lg:after:-bottom-1 after:text-2xl md:after:text-4xl xl:after:text-5xl lg:justify-center lg:gap-3 lg:bg-opacity-0 xl:before:content-[':'] before:absolute before:-right-9 before:top-[21%] before:text-9xl;
+}
+
+.eid-span-style {
+  @apply lg:bg-slate-100 lg:bg-opacity-80 lg:p-6 lg:rounded-md;
+}
+
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 2px #000;
+  }
+}

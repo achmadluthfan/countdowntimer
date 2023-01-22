@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="icon" type="image/x-icon" href="../image/indonesia-flag-icon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500&family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+
+    <title>Indonesian's big day</title>
+  </head>
+  <body
+    class="h-[100vh] w-[100vw] overflow-hidden bg-default-image bg-no-repeat bg-cover bg-left-bottom"
+  >
+    <div
+      class="container flex items-center justify-center h-[90vh] mx-auto flex-col justify-self-center"
+    >
+      <button
+        class="peer bg-orange-400 p-2 rounded-md focus:bg-violet-600 relative z-999 focus:z-0"
+      >
+        <span class="select-button">Select Day!</span>
+      </button>
+
+
+
+      <div class="w-[50vw] h-[110vh] bg-slate-200 absolute -left-[100vw] peer-focus:left-[0px] peer-focus: z-20 peer-focus:delay-[0ms] delay-[400ms] transition-all duration-500 ease-in"
+      ></div>
+
+      <div
+        class="w-[50vw] h-[110vh] bg-slate-200 absolute -right-[100vw] peer-focus:right-[0px] peer-focus: z-20 peer-focus:delay-[0ms] delay-[400ms] transition-all duration-500 ease-in"
+      ></div>
+
+      <div class="choice absolute w-[100vw] h-[100vh] opacity-0 bottom-40 peer-focus:opacity-100 peer-focus:z-30 peer-focus:bottom-0 peer-focus:delay-500 transition-all duration-500 ease-in -z-20"
+      >
+        <div
+          class="relative w-full h-full flex-col text-center flex group-[opacity-100]: z-1"
+        >
+          <div class="title flex-none p-5">
+            <h1 class="text-3xl text-slate-900">Choice your day!</h1>
+          </div>
+          <div class="days flex flex-col flex-1">
+            <div
+              class="day new-year relative flex justify-center items-center flex-1 cursor-pointer"
+            >
+              <p class="relative z-10 text-slate-900 text-2xl">New Year</p>
+              <img
+                id="newyear"
+                class="absolute z-1 h-[100%] w-[100%] object-cover object-center opacity-0 hover:opacity-100 transition-all duration-300"
+                src="../image/image/final image/new-year.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="day eid flex relative justify-center items-center flex-1 cursor-pointer"
+            >
+              <p class="relative z-10 text-slate-900 text-2xl">Eid Mubarak</p>
+              <img
+                id="eid"
+                class="absolute z-1 h-[100%] w-[100%] object-cover object-top opacity-0 hover:opacity-100 transition-all duration-300"
+                src="../image/image/final image/eid-mubarak-1.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="day christmas flex relative justify-center items-center flex-1 cursor-pointer"
+            >
+              <p class="relative z-10 text-slate-900 text-2xl">Christmas</p>
+              <img
+                id="christmas"
+                class="absolute z-1 h-[100%] w-[100%] object-cover opacity-0 hover:opacity-100 transition-all duration-300"
+                src="../image/image/final image/chrismas.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="day seclusion flex relative justify-center items-center flex-1 cursor-pointer"
+            >
+              <p class="relative z-10 text-slate-900 text-2xl">Seclusion</p>
+              <img
+                id="seclusion"
+                class="absolute z-1 h-[100%] w-[100%] object-cover opacity-0 hover:opacity-100 transition-all duration-300"
+                src="../image/image/final image/prambanan.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="day vesak flex relative justify-center items-center flex-1 cursor-pointer"
+            >
+              <p class="relative z-10 text-slate-900 text-2xl">Vesak</p>
+              <img
+                id="vesak"
+                class="absolute z-1 h-[100%] w-[100%] object-cover opacity-0 hover:opacity-100 transition-all duration-300"
+                src="../image/image/final image/borobudur.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="day chinese flex relative justify-center items-center flex-1 cursor-pointer"
+            >
+              <p class="relative z-10 text-slate-900 text-2xl">
+                Chinese New Year
+              </p>
+              <img
+                id="chinese"
+                class="absolute z-1 h-[100%] w-[100%] object-cover opacity-0 hover:opacity-100 transition-all duration-300"
+                src="../image/image/final image/chinese.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- <div class="close absolute top-0 right-0">
+                    <div>X</div>
+                </div> -->
+        </div>
+      </div>
+
+      <div
+        class="main rounded-md p-4 relative text-7xl md:text-[9rem] lg:bg-transparent lg:text-[10rem]"
+      >
+        <section class="current-time bg-slate-100 bg-opacity-90 relative rounded-md p-5">
+          <div class="clock p-5 rounded-sm w-[100%] flex gap-3 relative">
+            <div class="absolute twelve-hour-format text-sm right-0"></div>
+            <div class="hour relative self-center">00</div>
+            <div class="after:content-[':'] self-center"></div>
+            <div class="minute self-center">00</div>
+            <div
+              class="second absolute right-0 bottom-3 text-sm md:text-lg xl:text-xl"
+            >
+              00
+            </div>
+          </div>
+
+          <div class="date text-lg text-center">
+            <p class="month inline"></p>
+            <p class="day-current inline"></p>
+            <p class="date-number inline"></p>
+          </div>
+
+          <div class="select-format-button mt-2 absolute top-0 right-2 cursor-pointer z-1">
+            <div class="h-5 w-3 rounded-md cursor-pointer active:border-2 active:border-purple-600 flex items-center justify-center">
+              <div class="bg-orange-800 relative h-1 w-1 rounded-full after:content-[''] after:h-1 after:w-1 after:bg-red-800 after:absolute after:rounded after:top-2 before:content-[''] before:h-1 before:w-1 before:bg-red-800 before:absolute before:rounded before:bottom-2"
+              ></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="countdown-section w-[95vw] h-[50vh] px-2 text-6xl sm:w-[80vw] md:w-[65vw] lg:w-[75vw] xl:w-[60vw] 2xl:w-[50vw] hidden">
+
+          <section class="dateChosen w-fit text-sm mx-auto bg-slate-800 p-2 my-5 rounded-lg text-slate-200">
+            <span class="date-chosen">12</span>
+            <span>/</span>
+            <span class="date-chosen">2</span>
+            <span>/</span>
+            <span class="date-chosen">2020</span>
+          </section>
+
+          <div class="newyear-section h-[100%] font-montserrat font-light text-slate-50 lg:font-thin hidden">
+            <div class="newyear-left grid grid-cols-2 grid-rows-2 gap-2 h-[100%] lg:grid-cols-4 lg:gap-2">
+              <span class="relative day-left bg-slate-700 bg-opacity-40 flex justify-center items-center after:content-['DAY'] pseudo-newyer rounded-lg after:text-xl sm:after:text-4xl"
+              ></span>
+              <span class="relative hour-left bg-slate-700 bg-opacity-40 p-4 flex justify-center items-center after:content-['HOUR'] pseudo-newyer rounded-lg after:text-xl sm:after:text-4xl "
+              ></span>
+              <span class="relative minute-left bg-slate-700 bg-opacity-40 p-4 flex justify-center items-center after:content-['MINUTE'] pseudo-newyer rounded-lg after:text-xl sm:after:text-4xl "></span>
+              <span class="relative second-left bg-slate-700 bg-opacity-40 p-4 flex justify-center items-center after:content-['SECOND'] pseudo-newyer rounded-lg after:text-xl sm:after:text-4xl "></span>
+            </div>
+          </div>
+
+          <div class="eid-section h-[100%] font-light hidden">
+            <div class="eid-left grid grid-cols-2 grid-rows-2 gap-2 h-[100%] lg:grid-cols-[repeat(4,1fr)] lg:grid-rows-1 lg:h-[60%] lg:gap-2 xl:gap-10 justify-center text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+
+              <div class="eidDayLeft after:content-['Day'] eid-parent-span-style ">
+                
+              </div>
+
+              <div class="eidHourLeft after:content-['Hour'] eid-parent-span-style">
+               
+              </div>
+
+              <div class="eidMinuteLeft after:content-['Minute'] eid-parent-span-style">
+                
+              </div>
+
+              <div class="eidSecondLeft after:content-['Second'] eid-parent-span-style">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="chrismas h-[100%] hidden">
+            <div class="chrismas-left h-[30%] sm:h-[35%] font-changa text-red-500 grid grid-cols-[repeat(4,1fr)] gap-2 text-4xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+              <span class="relative flex justify-center items-center after:content-['DAY'] pseudo-chrismas rounded-lg after:text-lg sm:after:text-4xl bg-slate-200"></span>
+              <span class="relative flex justify-center items-center after:content-['HOUR'] pseudo-chrismas rounded-lg after:text-lg sm:after:text-4xl bg-slate-200"></span>
+              <span class="relative flex justify-center items-center after:content-['MINUTE'] pseudo-chrismas rounded-lg after:text-lg sm:after:text-4xl bg-slate-200"></span>
+              <span class="relative flex justify-center items-center after:content-['SECOND'] pseudo-chrismas rounded-lg after:text-lg sm:after:text-4xl bg-slate-200"></span>
+            </div>
+          </div>
+
+          <div class="seclusion h-[100%] hidden">
+            <div class="seclusion-left h-[30%] w-[90%] mx-auto lg:h-[40%] xl:h-[60%] xl:w-[100%] grid grid-cols-[repeat(4,1fr)] bg-slate-200 bg-opacity-30 rounded-md xl:bg-opacity-40 text-2xl lg:text-7xl xl:text-8xl 2xl:text-9xl 2xl:bg-transparent 2xl:gap-2">
+              <span class="relative flex justify-center items-center after:content-['DAY'] pseudo-seclusion rounded-lg after:text-sm sm:after:text-2xl text-slate-800 2xl:bg-slate-200">123</span>
+              <span class="relative flex justify-center items-center after:content-['HOUR'] pseudo-seclusion rounded-lg after:text-sm sm:after:text-2xl text-slate-800 2xl:bg-slate-200">09</span>
+              <span class="relative flex justify-center items-center after:content-['MINUTE'] pseudo-seclusion rounded-lg after:text-sm sm:after:text-2xl text-slate-800 2xl:bg-slate-200">56</span>
+              <span class="relative flex justify-center items-center after:content-['SECOND'] pseudo-seclusion rounded-lg after:text-sm sm:after:text-2xl text-slate-800 2xl:bg-slate-200 before:hidden">9</span>
+            </div>
+          </div>
+
+          <div class="vesak h-[100%] hidden">
+            <div class="vesak-left w-fit grid grid-rows-4  h-[100%] xl:h-auto xl:gap-3 text-4xl lg:text-7xl xl:text-8xl 2xl:text-9xl ">
+              <span class="relative flex justify-center items-center after:content-['DAY'] pseudo-vesak rounded-lg after:text-sm sm:after:text-2xl text-yellow-500">123</span>
+              <span class="relative flex justify-center items-center after:content-['HOUR'] pseudo-vesak rounded-lg after:text-sm sm:after:text-2xl text-yellow-500">09</span>
+              <span class="relative flex justify-center items-center after:content-['MINUTE'] pseudo-vesak rounded-lg after:text-sm sm:after:text-2xl text-yellow-500">56</span>
+              <span class="relative flex justify-center items-center after:content-['SECOND'] pseudo-vesak rounded-lg after:text-sm sm:after:text-2xl text-yellow-500">9</span>
+            </div>
+          </div>
+
+          <div class="chinese h-[100%] hidden">
+            <div class="chinese-left h-[100%] lg:h-[40%] grid grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(4,1fr)] md:h-[30%] gap-2 text-4xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+              <span class="relative flex justify-center items-center after:content-['DAY'] pseudo-chinese rounded-lg after:text-sm sm:after:text-2xl text-slate-200 bg-slate-800">123</span>
+              <span class="relative flex justify-center items-center after:content-['HOUR'] pseudo-chinese rounded-lg after:text-sm sm:after:text-2xl text-slate-200 bg-slate-800">09</span>
+              <span class="relative flex justify-center items-center after:content-['MINUTE'] pseudo-chinese rounded-lg after:text-sm sm:after:text-2xl text-slate-200 bg-slate-800">56</span>
+              <span class="relative flex justify-center items-center after:content-['SECOND'] pseudo-chinese rounded-lg after:text-sm sm:after:text-2xl text-slate-200 bg-slate-800">9</span>
+            </div>
+          </div>
+
+        </section>
+
+        
+
+      </div>
+    </div>
+
+    <div
+      class="format-zone absolute text-2xl flex -z-20 bg-[#e8e8e8] p-5 rounded-md top-[35%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-80 gap-1 justify-center items-center text-center transition-all duration-300 opacity-0"
+    >
+      <div class="format rounded-sm p-3 flex-2">
+        <button
+          class="format-choice text-2xl bg-[#000] border-none rounded-xl cursor-pointer mb-4"
+        >
+          <span
+            class="format-choice block box-border border-2 border-[black] rounded-xl bg-[#e8e8e8] text-[#000] -translate-y-2 transition-transform duration-100 ease-in p-2"
+            >12 Hour</span
+          >
+        </button>
+
+        <button
+          class="format-choice text-2xl bg-[#000] border-none rounded-xl cursor-pointer group"
+        >
+          <span
+            class="format-choice block box-border border-2 border-[black] rounded-xl bg-[#e8e8e8] text-[#000] -translate-y-2 transition-transform duration-100 ease-in p-2"
+            >24 Hour</span
+          >
+        </button>
+      </div>
+
+      <div class="time-zone rounded-sm p-3 flex-2">
+        <button class="timeZone-choice text-2xl bg-[#000] border-none rounded-xl cursor-pointer mb-4">
+          <span class="timeZone-choice block box-border border-2 border-[black] rounded-xl bg-[#e8e8e8] text-[#000] -translate-y-2 transition-transform duration-100 ease-in p-2">WIB</span>
+        </button>
+
+        <button
+          class="timeZone-choice text-2xl bg-[#000] border-none rounded-xl cursor-pointer mb-4"
+        >
+          <span
+            class="timeZone-choice block box-border border-2 border-[black] rounded-xl bg-[#e8e8e8] text-[#000] -translate-y-2 transition-transform duration-100 ease-in p-2"
+            >WITA</span
+          >
+        </button>
+
+        <button
+          class="timeZone-choice text-2xl bg-[#000] border-none rounded-xl cursor-pointer"
+        >
+          <span
+            class="timeZone-choice block box-border border-2 border-[black] rounded-xl bg-[#e8e8e8] text-[#000] -translate-y-2 transition-transform duration-100 ease-in p-2"
+            >WIT</span
+          >
+        </button>
+      </div>
+
+      <button
+        class="apply-format-zone bg-red-500 py-2 px-3 rounded-sm text-slate-100 flex-1 text-lg"
+      >
+        Apply
+      </button>
+    </div>
+
+    <button class="back absolute bottom-2 left-2  bg-slate-200 rounded-full hover:scale-125 transition-all flex justify-center items-center" style="height: 40px; width: 40px;">
+      🔙
+    </button>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
+
+
+
+<!-- <section class="flex">
+  <span
+  class="relative day-left bg-slate-200 bg-opacity-40 flex justify-center items-center after:content-['DAY'] pseudo-newyer rounded-lg"
+>
+  12
+</span>
+<span>12</span>
+</section>
+
+<section>
+  <span
+  class="relative day-left bg-slate-200 bg-opacity-40 flex justify-center items-center after:content-['HOUR'] pseudo-newyer rounded-lg"
+>
+  12
+</span>
+<span>12</span>
+</section>
+
+<section>
+  <span
+  class="relative day-left bg-slate-200 bg-opacity-40 flex justify-center items-center after:content-['MINUTE'] pseudo-newyer rounded-lg"
+>
+  12
+</span>
+<span>12</span>
+</section>
+
+<section>
+  <span
+  class="relative day-left bg-slate-200 bg-opacity-40 flex justify-center items-center after:content-['SECOND'] pseudo-newyer rounded-lg"
+>
+  12
+</span>
+<span>12</span>
+</section> -->
