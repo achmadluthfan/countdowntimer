@@ -225,7 +225,7 @@ days.addEventListener("click", function (e) {
   if (e.target.closest("#newyear") || e.target.textContent == " New Year ") {
     e.target.parentElement.classList.add("day-chosen");
     document.body.style.backgroundImage =
-      "url('../image/image/final image/new-year.jpg')";
+      "url('./image/image/final image/new-year.jpg')";
     document.body.style.backgroundPosition = "center";
     currentTimeSection.classList.add("hidden");
     countDownSection.classList.remove("hidden");
@@ -244,7 +244,7 @@ days.addEventListener("click", function (e) {
   ) {
     e.target.parentElement.classList.add("day-chosen");
     document.body.style.backgroundImage =
-      "url('../image/image/final image/eid-mubarak-1.jpg')";
+      "url('./image/image/final image/eid-mubarak-1.jpg')";
     document.body.style.backgroundPosition = "center";
     currentTimeSection.classList.add("hidden");
     countDownSection.classList.remove("hidden");
@@ -263,7 +263,7 @@ days.addEventListener("click", function (e) {
   ) {
     e.target.parentElement.classList.add("day-chosen");
     document.body.style.backgroundImage =
-      "url('../image/image/final image/chrismas.jpg')";
+      "url('./image/image/final image/chrismas.jpg')";
     document.body.style.backgroundPosition = "center";
     currentTimeSection.classList.add("hidden");
     countDownSection.classList.remove("hidden");
@@ -282,7 +282,7 @@ days.addEventListener("click", function (e) {
   ) {
     e.target.parentElement.classList.add("day-chosen");
     document.body.style.backgroundImage =
-      "url('../image/image/final image/prambanan.jpg')";
+      "url('./image/image/final image/prambanan.jpg')";
     document.body.style.backgroundPosition = "center";
     currentTimeSection.classList.add("hidden");
     countDownSection.classList.remove("hidden");
@@ -298,7 +298,7 @@ days.addEventListener("click", function (e) {
   } else if (e.target.closest("#vesak") || e.target.textContent == " Vesak ") {
     e.target.parentElement.classList.add("day-chosen");
     document.body.style.backgroundImage =
-      "url('../image/image/final image/borobudur.jpg')";
+      "url('./image/image/final image/borobudur.jpg')";
     document.body.style.backgroundPosition = "left";
     currentTimeSection.classList.add("hidden");
     countDownSection.classList.remove("hidden");
@@ -317,7 +317,7 @@ days.addEventListener("click", function (e) {
   ) {
     e.target.parentElement.classList.add("day-chosen");
     document.body.style.backgroundImage =
-      "url('../image/image/final image/chinese.jpg')";
+      "url('./image/image/final image/chinese.jpg')";
     document.body.style.backgroundPosition = "center";
     currentTimeSection.classList.add("hidden");
     countDownSection.classList.remove("hidden");
